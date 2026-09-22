@@ -71,7 +71,6 @@ theme_override_font_sizes/font_size = 10
 text = "Credits"
 
 [node name="CreditsPanel" type="Control" parent="." unique_id=570426101]
-visible = false
 anchors_preset = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -123,7 +122,10 @@ text = "Team"
 layout_mode = 2
 theme_override_fonts/font = ExtResource("4_13sgg")
 theme_override_font_sizes/font_size = 9
-text = "Yifan Xia"
+text = "Yifan Xia
+Daryl Wiriadi
+Jenul Ferdinand
+Shahmeer Khan"
 autowrap_mode = 2
 
 [node name="AssetsHeader" type="Label" parent="CreditsPanel/Scroll/CreditsList" unique_id=272666869]
@@ -136,7 +138,8 @@ text = "Assets"
 layout_mode = 2
 theme_override_fonts/font = ExtResource("4_13sgg")
 theme_override_font_sizes/font_size = 9
-text = "Sound effects from OpenGameArt.org"
+text = "Sound effects from OpenGameArt.org
+All visuals are originally made by the authors"
 autowrap_mode = 2
 
 [node name="BackButton" type="Button" parent="CreditsPanel" unique_id=682151608]
