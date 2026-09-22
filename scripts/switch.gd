@@ -30,7 +30,10 @@ func _process(delta: float) -> void:
 			game_over()
 			
 func game_over() -> void:
-	pass
+	get_tree().change_scene_to_file("res://scenes/lose.tscn")
+
+func game_win() -> void:
+	get_tree().change_scene_to_file("res://scenes/win.tscn")
 	
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("Look"):

@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://dr60oocpldru0"]
+
+[ext_resource type="Script" uid="uid://cyamrc0i1huqn" path="res://scripts/lose.gd" id="1_vjdtf"]
+
+[node name="Control" type="Control" unique_id=454005585]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vjdtf")
+
+[node name="Title" type="Label" parent="." unique_id=884877748]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Subtitle" type="Label" parent="." unique_id=2020507979]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Buttons" type="VBoxContainer" parent="." unique_id=104588022]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="RetryButton" type="Button" parent="Buttons" unique_id=1198259438]
+layout_mode = 2
+
+[node name="QuitButton" type="Button" parent="Buttons" unique_id=1719813979]
+layout_mode = 2

@@ -101,7 +101,10 @@ func _unhandled_input(event: InputEvent) -> void:
 		counter.add_text(str(sentences_completed) + "/" + "40")
 		counter.pop()
 
-		generate_new_sentence()
+		if sentences_completed >= 40:
+			main.game_win()
+		else:
+			generate_new_sentence()
 
 func _process(delta: float) -> void:
 	cursor_timer -= delta
