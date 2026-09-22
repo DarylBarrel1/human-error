@@ -1,7 +1,7 @@
 extends Control
 ## Main menu: start the game, adjust settings, or read the credits.
 
-const GAME_SCENE := "res://scenes/main.tscn"
+const GAME_SCENE = "res://scenes/main.tscn"
 
 @onready var main_buttons: Control = $MainButtons
 @onready var credits_panel: Control = $CreditsPanel

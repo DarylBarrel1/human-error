@@ -10,8 +10,8 @@
 script = ExtResource("1_spe5c")
 
 [node name="MonitorBackground" type="Sprite2D" parent="." unique_id=356533016]
-position = Vector2(241.5, 119)
-scale = Vector2(2.27, 1.5400001)
+position = Vector2(241.5, 122)
+scale = Vector2(2.27, 1.6000001)
 texture = ExtResource("1_3jcr0")
 
 [node name="Monitor" type="Sprite2D" parent="." unique_id=548792988]
@@ -21,7 +21,7 @@ texture = ExtResource("1_gnqr3")
 
 [node name="MonitorText" type="RichTextLabel" parent="." unique_id=1956140105]
 offset_left = 160.0
-offset_top = 70.0
+offset_top = 65.0
 offset_right = 325.0
 offset_bottom = 175.0
 theme_override_fonts/normal_font = ExtResource("4_bvax4")
