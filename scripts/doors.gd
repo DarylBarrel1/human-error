@@ -23,7 +23,7 @@ var monster_stage = 0
 
 func _process(_delta: float) -> void:
 	if Input.is_action_pressed("Door1_Lit"):
-		if monster_door == 3:
+		if monster_door == 1:
 			if monster_stage == 0:
 				$Door1.texture = LIT1S0
 			elif monster_stage == 1:
@@ -38,7 +38,7 @@ func _process(_delta: float) -> void:
 		$Door1.texture = UNLIT
 	
 	if Input.is_action_pressed("Door2_Lit"):
-		if monster_door == 3:
+		if monster_door == 2:
 			if monster_stage == 0:
 				$Door2.texture = LIT2S0
 			elif monster_stage == 1:
