@@ -115,7 +115,7 @@ theme_override_constants/separation = 8
 [node name="TeamHeader" type="Label" parent="CreditsPanel/Scroll/CreditsList" unique_id=1507504610]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("5_i6lef")
-theme_override_font_sizes/font_size = 11
+theme_override_font_sizes/font_size = 12
 text = "Team"
 
 [node name="TeamList" type="Label" parent="CreditsPanel/Scroll/CreditsList" unique_id=541481713]
@@ -131,7 +131,7 @@ autowrap_mode = 2
 [node name="AssetsHeader" type="Label" parent="CreditsPanel/Scroll/CreditsList" unique_id=272666869]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("5_i6lef")
-theme_override_font_sizes/font_size = 11
+theme_override_font_sizes/font_size = 12
 text = "Assets"
 
 [node name="AssetsList" type="Label" parent="CreditsPanel/Scroll/CreditsList" unique_id=2119792395]

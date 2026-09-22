@@ -5,6 +5,8 @@ signal facing_emit(facing)
 var facing: Node2D
 var opposite: Node2D
 
+var timer = 10.0
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	facing = $Monitor
@@ -13,7 +15,17 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	# I think i'll add monster logic here later
+	timer -= delta
+	if timer <= 0.0:
+		timer = randf_range(10, 30)
+		if $Doors.monster_stage < 3:
+			# TODO: PLAY MONSTER AUDIO HERE
+			$Doors.monster_door = 3
+			$Doors.monster_stage += 1
+		else:
+			game_over()
+			
+func game_over() -> void:
 	pass
 	
 func _input(event: InputEvent) -> void:
