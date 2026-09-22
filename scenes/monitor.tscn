@@ -2,15 +2,28 @@
 
 [ext_resource type="Texture2D" uid="uid://c82pna1nn4j6n" path="res://assets/objects/monitor_background.png" id="1_3jcr0"]
 [ext_resource type="Texture2D" uid="uid://d1atggf40y5sh" path="res://assets/objects/monitor.png" id="1_gnqr3"]
+[ext_resource type="Script" uid="uid://blhgb8isbgpbk" path="res://scripts/monitor.gd" id="1_spe5c"]
+[ext_resource type="FontFile" uid="uid://d3jtcfuop2v6r" path="res://assets/fonts/PixelifySans-Regular.ttf" id="4_bvax4"]
+[ext_resource type="FontFile" uid="uid://d012ceqkbt0a7" path="res://assets/fonts/PixelifySans-Bold.ttf" id="5_cdfrg"]
 
 [node name="Node2D" type="Node2D" unique_id=860135480]
+script = ExtResource("1_spe5c")
 
 [node name="MonitorBackground" type="Sprite2D" parent="." unique_id=356533016]
-position = Vector2(241.5, 127)
-scale = Vector2(2.27, 1.7)
+position = Vector2(241.5, 119)
+scale = Vector2(2.27, 1.5400001)
 texture = ExtResource("1_3jcr0")
 
 [node name="Monitor" type="Sprite2D" parent="." unique_id=548792988]
 position = Vector2(240, 145)
 scale = Vector2(1.2045454, 1.2045455)
 texture = ExtResource("1_gnqr3")
+
+[node name="MonitorText" type="RichTextLabel" parent="." unique_id=1956140105]
+offset_left = 160.0
+offset_top = 70.0
+offset_right = 325.0
+offset_bottom = 175.0
+theme_override_fonts/normal_font = ExtResource("4_bvax4")
+theme_override_fonts/bold_font = ExtResource("5_cdfrg")
+bbcode_enabled = true

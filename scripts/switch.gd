@@ -1,5 +1,7 @@
 extends Node2D
 
+signal facing_emit(facing)
+
 var facing: Node2D
 var opposite: Node2D
 
@@ -16,6 +18,7 @@ func _process(delta: float) -> void:
 	
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("Look"):
+		facing_emit.emit(null)
 		if facing == $Monitor:
 			opposite = $Doors
 		else:
@@ -33,3 +36,4 @@ func _input(event: InputEvent) -> void:
 		await create_tween().tween_property(opposite, "position:y", 0.0, 0.35).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT).finished
 
 		facing = opposite
+		facing_emit.emit(facing)
