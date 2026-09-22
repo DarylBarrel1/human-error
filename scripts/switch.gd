@@ -20,7 +20,8 @@ func _process(delta: float) -> void:
 		timer = randf_range(10, 30)
 		if $Doors.monster_stage < 3:
 			# TODO: PLAY MONSTER AUDIO HERE
-			$Doors.monster_door = 3
+			if $Doors.monster_door == 0:
+				$Doors.monster_door = randi_range(1, 3)
 			$Doors.monster_stage += 1
 		else:
 			game_over()
