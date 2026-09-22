@@ -1,6 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://dtxn1s6ot4c1p"]
+[gd_scene format=3 uid="uid://dtxn1s6ot4c1p"]
 
-[ext_resource type="Script" path="res://scenes/doors.gd" id="1_doors"]
+[ext_resource type="Script" uid="uid://c4lng3le77fkp" path="res://scripts/doors.gd" id="1_doors"]
 [ext_resource type="Texture2D" uid="uid://bb2iqbqrvd6fl" path="res://assets/backgrounds/background_dark.png" id="1_5v6d3"]
 [ext_resource type="Texture2D" uid="uid://bq8el5ybrwr7k" path="res://assets/objects/Door.png" id="2_26m4p"]
 
