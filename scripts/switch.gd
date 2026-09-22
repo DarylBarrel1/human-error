@@ -15,6 +15,9 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	if $Doors.zap_flickering > 0:
+		return
+
 	timer -= delta
 	if timer <= 0.0:
 		timer = randf_range(10, 30)

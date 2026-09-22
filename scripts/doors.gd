@@ -44,10 +44,6 @@ func _input(event: InputEvent) -> void:
 		
 		if zap_door > 0:
 			zap_flickering = 1.8
-			if monster_door == zap_door:
-				monster_door = 0
-				monster_stage = 0
-				main.timer = randf_range(15, 30)
 			cooldown = 10.0
 
 
@@ -93,6 +89,11 @@ func _process(_delta: float) -> void:
 			zap_flash = true
 		else:
 			zap_flash = false 
+
+			if monster_door == zap_door:
+				monster_door = 0
+				monster_stage = 0
+				main.timer = randf_range(15, 30)
 
 		zap_flickering -= _delta
 
