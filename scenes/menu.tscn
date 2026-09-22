@@ -1,0 +1,158 @@
+[gd_scene format=3 uid="uid://cy70yj3tus1sa"]
+
+[ext_resource type="Script" uid="uid://bw2l3cf3mv2wy" path="res://scripts/menu.gd" id="1_g3eks"]
+[ext_resource type="Texture2D" uid="uid://bb2iqbqrvd6fl" path="res://assets/backgrounds/background_dark.png" id="2_g3eks"]
+[ext_resource type="PackedScene" uid="uid://bcpulwrpyfgw3" path="res://scenes/main.tscn" id="2_v86rl"]
+[ext_resource type="FontFile" uid="uid://d012ceqkbt0a7" path="res://assets/fonts/PixelifySans-Bold.ttf" id="3_v86rl"]
+[ext_resource type="FontFile" uid="uid://d3jtcfuop2v6r" path="res://assets/fonts/PixelifySans-Regular.ttf" id="4_13sgg"]
+[ext_resource type="FontFile" uid="uid://dk84a1h1oe8ih" path="res://assets/fonts/PixelifySans-Medium.ttf" id="5_i6lef"]
+
+[node name="Menu" type="Control" unique_id=2028318867]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_g3eks")
+
+[node name="Main" parent="." unique_id=1762041060 instance=ExtResource("2_v86rl")]
+
+[node name="Background" type="TextureRect" parent="." unique_id=987830442]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+texture = ExtResource("2_g3eks")
+expand_mode = 1
+stretch_mode = 1
+
+[node name="Title" type="Label" parent="." unique_id=562368064]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 73.0
+offset_top = 9.0
+offset_right = 273.0
+offset_bottom = 39.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("3_v86rl")
+theme_override_font_sizes/font_size = 20
+text = "HUMAN ERROR"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MainButtons" type="VBoxContainer" parent="." unique_id=1562995088]
+layout_mode = 0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -55.0
+offset_top = -70.0
+offset_right = 55.0
+offset_bottom = 70.0
+theme_override_constants/separation = 14
+alignment = 1
+
+[node name="StartButton" type="Button" parent="MainButtons" unique_id=1316251941]
+custom_minimum_size = Vector2(110, 26)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_13sgg")
+theme_override_font_sizes/font_size = 10
+text = "Start Game"
+
+[node name="CreditsButton" type="Button" parent="MainButtons" unique_id=1263919596]
+custom_minimum_size = Vector2(110, 26)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_13sgg")
+theme_override_font_sizes/font_size = 10
+text = "Credits"
+
+[node name="CreditsPanel" type="Control" parent="." unique_id=570426101]
+visible = false
+anchors_preset = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="DimOverlay" type="ColorRect" parent="CreditsPanel" unique_id=892759202]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+color = Color(0, 0, 0, 0.6)
+
+[node name="Title" type="Label" parent="CreditsPanel" unique_id=1615229864]
+layout_mode = 0
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -100.0
+offset_top = 10.0
+offset_right = 100.0
+offset_bottom = 34.0
+theme_override_fonts/font = ExtResource("3_v86rl")
+theme_override_font_sizes/font_size = 18
+text = "CREDITS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Scroll" type="ScrollContainer" parent="CreditsPanel" unique_id=1058575666]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 30.0
+offset_top = 38.0
+offset_right = -30.0
+offset_bottom = -38.0
+horizontal_scroll_mode = 0
+
+[node name="CreditsList" type="VBoxContainer" parent="CreditsPanel/Scroll" unique_id=1406131441]
+custom_minimum_size = Vector2(420, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 8
+
+[node name="TeamHeader" type="Label" parent="CreditsPanel/Scroll/CreditsList" unique_id=1507504610]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_i6lef")
+theme_override_font_sizes/font_size = 11
+text = "Team"
+
+[node name="TeamList" type="Label" parent="CreditsPanel/Scroll/CreditsList" unique_id=541481713]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_13sgg")
+theme_override_font_sizes/font_size = 9
+text = "Yifan Xia"
+autowrap_mode = 2
+
+[node name="AssetsHeader" type="Label" parent="CreditsPanel/Scroll/CreditsList" unique_id=272666869]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_i6lef")
+theme_override_font_sizes/font_size = 11
+text = "Assets"
+
+[node name="AssetsList" type="Label" parent="CreditsPanel/Scroll/CreditsList" unique_id=2119792395]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_13sgg")
+theme_override_font_sizes/font_size = 9
+text = "Sound effects from OpenGameArt.org"
+autowrap_mode = 2
+
+[node name="BackButton" type="Button" parent="CreditsPanel" unique_id=682151608]
+layout_mode = 0
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -30.0
+offset_right = 40.0
+offset_bottom = -6.0
+theme_override_fonts/font = ExtResource("4_13sgg")
+theme_override_font_sizes/font_size = 10
+text = "Back"
+
+[connection signal="pressed" from="MainButtons/StartButton" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="MainButtons/CreditsButton" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="CreditsPanel/BackButton" to="." method="_on_back_pressed"]
