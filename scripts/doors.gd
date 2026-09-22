@@ -81,11 +81,7 @@ func _process(_delta: float) -> void:
 			zap_flash = true
 		elif zap_flickering > 0.45:
 			zap_flash = false
-		elif zap_flickering > 0.3:
-			zap_flash = true
-		elif zap_flickering > 0.15:
-			zap_flash = false
-		elif zap_flickering > 0.05:
+		elif zap_flickering > 0.35:
 			zap_flash = true
 		else:
 			zap_flash = false 
