@@ -6,7 +6,7 @@ extends Node2D
 const sentences = [
 	"Something's here",
 	"We have to leave",
-	"Dear mother, I've given up trying to reason with these creatures",
+	"Dear mother, I'm sorry but we have created something much worse",
 	"Keep typing keep typing keep typing keep typing",
 	"101011111000101011010101100001001110101100",
 	"Error 4044444444",
