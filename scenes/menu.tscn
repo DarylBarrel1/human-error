@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bw2l3cf3mv2wy" path="res://scripts/menu.gd" id="1_g3eks"]
 [ext_resource type="Texture2D" uid="uid://bb2iqbqrvd6fl" path="res://assets/backgrounds/background_dark.png" id="2_g3eks"]
-[ext_resource type="PackedScene" uid="uid://bcpulwrpyfgw3" path="res://scenes/main.tscn" id="2_v86rl"]
+[ext_resource type="Texture2D" uid="uid://cw8rllurf6cuq" path="res://assets/entities/monster.png" id="3_g3eks"]
 [ext_resource type="FontFile" uid="uid://d012ceqkbt0a7" path="res://assets/fonts/PixelifySans-Bold.ttf" id="3_v86rl"]
 [ext_resource type="FontFile" uid="uid://d3jtcfuop2v6r" path="res://assets/fonts/PixelifySans-Regular.ttf" id="4_13sgg"]
 [ext_resource type="FontFile" uid="uid://dk84a1h1oe8ih" path="res://assets/fonts/PixelifySans-Medium.ttf" id="5_i6lef"]
@@ -16,8 +16,6 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_g3eks")
 
-[node name="Main" parent="." unique_id=1762041060 instance=ExtResource("2_v86rl")]
-
 [node name="Background" type="TextureRect" parent="." unique_id=987830442]
 layout_mode = 0
 anchor_right = 1.0
@@ -26,6 +24,12 @@ mouse_filter = 2
 texture = ExtResource("2_g3eks")
 expand_mode = 1
 stretch_mode = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="Background" unique_id=923900151]
+position = Vector2(286, 67)
+texture = ExtResource("3_g3eks")
+region_enabled = true
+region_rect = Rect2(0, -150, 292, 428)
 
 [node name="Title" type="Label" parent="." unique_id=562368064]
 layout_mode = 1
