@@ -27,3 +27,14 @@ offset_bottom = 175.0
 theme_override_fonts/normal_font = ExtResource("4_bvax4")
 theme_override_fonts/bold_font = ExtResource("5_cdfrg")
 bbcode_enabled = true
+
+[node name="CounterText" type="RichTextLabel" parent="." unique_id=782423111]
+offset_left = 224.0
+offset_top = 184.0
+offset_right = 264.0
+offset_bottom = 196.0
+theme_override_fonts/normal_font = ExtResource("4_bvax4")
+theme_override_fonts/bold_font = ExtResource("5_cdfrg")
+theme_override_font_sizes/normal_font_size = 9
+theme_override_font_sizes/bold_font_size = 9
+horizontal_alignment = 1

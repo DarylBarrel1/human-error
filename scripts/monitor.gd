@@ -2,6 +2,7 @@ extends Node2D
 
 @onready var main = get_parent()
 @onready var label: RichTextLabel = $MonitorText
+@onready var counter: RichTextLabel = $CounterText
 
 const sentences = [
 	"Something's here",
@@ -18,11 +19,18 @@ const sentences = [
 var previous = ""
 var target = ""
 var typed = ""
+var sentences_completed = 0
 var monitor = true
 
 func _ready() -> void:
 	if main.has_signal("facing_emit"):
 		main.facing_emit.connect(on_facing_changed)
+
+	counter.clear()
+	counter.push_color(Color.GREEN)
+	counter.add_text(str(sentences_completed) + "/" + "40")
+	counter.pop()
+
 	return generate_new_sentence()
 
 func on_facing_changed(facing: Node) -> void:
@@ -75,4 +83,11 @@ func _unhandled_input(event: InputEvent) -> void:
 	get_viewport().set_input_as_handled()
 
 	if typed == target:
+		sentences_completed += 1
+		
+		counter.clear()
+		counter.push_color(Color.GREEN)
+		counter.add_text(str(sentences_completed) + "/" + "40")
+		counter.pop()
+
 		generate_new_sentence()
