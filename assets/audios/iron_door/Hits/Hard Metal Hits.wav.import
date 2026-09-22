@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://sy7b8e24tfky"
+path="res://.godot/imported/Hard Metal Hits.wav-6ac2b7cc1956515900f96565d2a28bae.sample"
+
+[deps]
+
+source_file="res://assets/audios/iron_door/Hits/Hard Metal Hits.wav"
+dest_files=["res://.godot/imported/Hard Metal Hits.wav-6ac2b7cc1956515900f96565d2a28bae.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

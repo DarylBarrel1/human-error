@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cgwrsutmik5pf"
+path="res://.godot/imported/Moving Metal Hits 1.wav-b65cffe3e47bd534b1c7819b3a32eb91.sample"
+
+[deps]
+
+source_file="res://assets/audios/iron_door/Hits/Moving Metal Hits 1.wav"
+dest_files=["res://.godot/imported/Moving Metal Hits 1.wav-b65cffe3e47bd534b1c7819b3a32eb91.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

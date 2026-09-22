@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://drlu5fulqmu77"
+path="res://.godot/imported/fan_noise.wav-30edf7f5e4f4a7212b7b07d90be693b8.sample"
+
+[deps]
+
+source_file="res://assets/audios/Monitor/ambient machinery 2/fan_noise.wav"
+dest_files=["res://.godot/imported/fan_noise.wav-30edf7f5e4f4a7212b7b07d90be693b8.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

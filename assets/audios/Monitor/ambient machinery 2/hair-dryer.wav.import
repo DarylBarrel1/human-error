@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cofug01xq8gg0"
+path="res://.godot/imported/hair-dryer.wav-b88ff5ada9eab10b6e144b12d5a220da.sample"
+
+[deps]
+
+source_file="res://assets/audios/Monitor/ambient machinery 2/hair-dryer.wav"
+dest_files=["res://.godot/imported/hair-dryer.wav-b88ff5ada9eab10b6e144b12d5a220da.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

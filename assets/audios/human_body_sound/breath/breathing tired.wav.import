@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://h2jyq0f01gyv"
+path="res://.godot/imported/breathing tired.wav-38f5d579543cb90a25a8796147e6286b.sample"
+
+[deps]
+
+source_file="res://assets/audios/human_body_sound/breath/breathing tired.wav"
+dest_files=["res://.godot/imported/breathing tired.wav-38f5d579543cb90a25a8796147e6286b.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

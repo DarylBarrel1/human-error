@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dkqku6vqs1oo6"
+path="res://.godot/imported/motor_2.wav-e661f2abb1c99ac9fdc0c4335e35c759.sample"
+
+[deps]
+
+source_file="res://assets/audios/Monitor/ambient machinery 2/motor_2.wav"
+dest_files=["res://.godot/imported/motor_2.wav-e661f2abb1c99ac9fdc0c4335e35c759.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
