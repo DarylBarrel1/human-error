@@ -20,6 +20,7 @@ const LIT3S3 = preload("res://assets/objects/stage_3_room_3.png")
 
 var monster_door = 0
 var monster_stage = 0
+var cooldown = 0
 var doors = false
 
 func _ready() -> void:
@@ -29,7 +30,27 @@ func _ready() -> void:
 func on_facing_changed(facing: Node) -> void:
 	doors = (facing == self)
 
+func _input(event: InputEvent) -> void:
+	var zap_door = 0
+	if doors and cooldown <= 0.0 and event.is_action_pressed("Zap"):
+		if Input.is_action_pressed("Door1_Lit"):
+			zap_door = 1
+		elif Input.is_action_pressed("Door2_Lit"):
+			zap_door = 2
+		elif Input.is_action_pressed("Door3_Lit"):
+			zap_door = 3
+		
+		if zap_door > 0:
+			if monster_door == zap_door:
+				monster_door = 0
+				monster_stage = 0
+				main.timer = randf_range(15, 30)
+			cooldown = 10.0
+
+
 func _process(_delta: float) -> void:
+	if cooldown > 0.0:
+		cooldown -= _delta
 	if doors:
 		if Input.is_action_pressed("Door1_Lit"):
 			if monster_door == 1:
