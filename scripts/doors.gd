@@ -4,6 +4,14 @@ extends Node2D
 
 const UNLIT = preload("res://assets/objects/Door.png")
 const LIT1S0 = preload("res://assets/objects/stage_0_room_1.png")
+const LIT1S1 = preload("res://assets/objects/stage_1_room_1.png")
+const LIT1S2 = preload("res://assets/objects/stage_2_room_1.png")
+const LIT1S3 = preload("res://assets/objects/stage_3_room_1.png")
+
+const LIT2S0 = preload("res://assets/objects/stage_0_room_2.png")
+const LIT2S1 = preload("res://assets/objects/stage_1_room_2.png")
+const LIT2S2 = preload("res://assets/objects/stage_2_room_2.png")
+const LIT2S3 = preload("res://assets/objects/stage_3_room_2.png")
 
 const LIT3S0 = preload("res://assets/objects/stage_0_room_3.png")
 const LIT3S1 = preload("res://assets/objects/stage_1_room_3.png")
@@ -15,9 +23,34 @@ var monster_stage = 0
 
 func _process(_delta: float) -> void:
 	if Input.is_action_pressed("Door1_Lit"):
-		$Door1.texture = LIT1S0
+		if monster_door == 3:
+			if monster_stage == 0:
+				$Door1.texture = LIT1S0
+			elif monster_stage == 1:
+				$Door1.texture = LIT1S1
+			elif monster_stage == 2:
+				$Door1.texture = LIT1S2
+			elif monster_stage == 3:
+				$Door1.texture = LIT1S3
+		else:
+			$Door1.texture = LIT1S0
 	else:
 		$Door1.texture = UNLIT
+	
+	if Input.is_action_pressed("Door2_Lit"):
+		if monster_door == 3:
+			if monster_stage == 0:
+				$Door2.texture = LIT2S0
+			elif monster_stage == 1:
+				$Door2.texture = LIT2S1
+			elif monster_stage == 2:
+				$Door2.texture = LIT2S2
+			elif monster_stage == 3:
+				$Door2.texture = LIT2S3
+		else:
+			$Door2.texture = LIT2S0
+	else:
+		$Door2.texture = UNLIT
 
 	if Input.is_action_pressed("Door3_Lit"):
 		if monster_door == 3:
