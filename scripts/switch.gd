@@ -20,7 +20,7 @@ func _process(delta: float) -> void:
 
 	timer -= delta
 	if timer <= 0.0:
-		timer = randf_range(10, 30)
+		timer = randf_range(5, 20)
 		if $Doors.monster_stage < 3:
 			# TODO: PLAY MONSTER AUDIO HERE
 			if $Doors.monster_door == 0:

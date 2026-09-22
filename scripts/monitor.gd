@@ -22,6 +22,9 @@ var typed = ""
 var sentences_completed = 0
 var monitor = true
 
+var cursor_timer = 0.0
+var cursor_blink = true
+
 func _ready() -> void:
 	if main.has_signal("facing_emit"):
 		main.facing_emit.connect(on_facing_changed)
@@ -56,9 +59,12 @@ func screen_text_display() -> void:
 				label.push_color(Color.RED)
 		elif target_pos == typed.length():
 			label.push_color(Color.WHITE)
-			label.push_underline() 
-			label.add_text(target_letter)
-			label.pop()
+			if cursor_blink == true:
+				label.push_underline() 
+				label.add_text(target_letter)
+				label.pop()
+			else:
+				label.add_text(target_letter)
 		else:
 			label.push_color("#3f4d44")
 	
@@ -71,12 +77,17 @@ func _unhandled_input(event: InputEvent) -> void:
 	if not monitor or not event is InputEventKey or not event.pressed or (event.unicode == 0 and event.keycode != KEY_BACKSPACE):
 		return
 
+	cursor_timer = 0.6
+	cursor_blink = true
+
 	if event.keycode == KEY_BACKSPACE:
 		typed = typed.left(-1)
+	elif event.keycode != KEY_SPACE and typed.length() < target.length() and target[typed.length()] == " ":
+		typed += " "
 	elif typed.length() < target.length():
 		var letter = char(event.unicode).to_upper()
 		typed += letter
-
+	
 	label.clear()
 	screen_text_display()
 
@@ -91,3 +102,11 @@ func _unhandled_input(event: InputEvent) -> void:
 		counter.pop()
 
 		generate_new_sentence()
+
+func _process(delta: float) -> void:
+	cursor_timer -= delta
+	if cursor_timer <= 0.0:
+		cursor_timer = 0.45
+		cursor_blink = not cursor_blink
+		label.clear()
+		screen_text_display()
