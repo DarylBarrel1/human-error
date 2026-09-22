@@ -1,3 +1,22 @@
 [gd_scene format=3 uid="uid://dtxn1s6ot4c1p"]
 
+[ext_resource type="Texture2D" uid="uid://bb2iqbqrvd6fl" path="res://assets/backgrounds/background_dark.png" id="1_5v6d3"]
+[ext_resource type="Texture2D" uid="uid://bq8el5ybrwr7k" path="res://assets/objects/Door.png" id="2_26m4p"]
+
 [node name="Node2D" type="Node2D" unique_id=1469646759]
+
+[node name="BackgroundDark" type="Sprite2D" parent="." unique_id=1285989925]
+position = Vector2(240, 135)
+texture = ExtResource("1_5v6d3")
+
+[node name="Door" type="Sprite2D" parent="." unique_id=349365659]
+position = Vector2(240, 128)
+texture = ExtResource("2_26m4p")
+
+[node name="Door2" type="Sprite2D" parent="." unique_id=157500599]
+position = Vector2(85, 128)
+texture = ExtResource("2_26m4p")
+
+[node name="Door3" type="Sprite2D" parent="." unique_id=259690554]
+position = Vector2(392, 128)
+texture = ExtResource("2_26m4p")
