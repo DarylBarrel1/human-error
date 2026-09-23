@@ -5,11 +5,7 @@
 [ext_resource type="Script" uid="uid://blhgb8isbgpbk" path="res://scripts/monitor.gd" id="1_spe5c"]
 [ext_resource type="FontFile" uid="uid://d3jtcfuop2v6r" path="res://assets/fonts/PixelifySans-Regular.ttf" id="4_bvax4"]
 [ext_resource type="FontFile" uid="uid://d012ceqkbt0a7" path="res://assets/fonts/PixelifySans-Bold.ttf" id="5_cdfrg"]
-[ext_resource type="AudioStream" uid="uid://bygj700yjueye" path="res://assets/audios/typing/Key1.wav" id="6_chdqg"]
-[ext_resource type="AudioStream" uid="uid://xpx7idkydjgp" path="res://assets/audios/typing/Key2.wav" id="7_cxlhv"]
-[ext_resource type="AudioStream" uid="uid://cv8cw5x3kdhub" path="res://assets/audios/typing/Key3.wav" id="8_ntodn"]
 [ext_resource type="AudioStream" uid="uid://c04cttd576ijc" path="res://assets/audios/typing/Key4.wav" id="9_1ggaw"]
-[ext_resource type="AudioStream" uid="uid://cik0p7yjtx4ym" path="res://assets/audios/typing/Key6.wav" id="10_244c1"]
 [ext_resource type="AudioStream" uid="uid://bhc1xxcplvft" path="res://assets/audios/typing/Key5.wav" id="10_cxlhv"]
 [ext_resource type="AudioStream" uid="uid://o86xsd1wmys6" path="res://assets/audios/typing/Key7.wav" id="11_w6237"]
 [ext_resource type="AudioStream" uid="uid://kexudl8ierr4" path="res://assets/audios/typing/Key8.wav" id="12_ifwe1"]
@@ -48,23 +44,11 @@ theme_override_font_sizes/normal_font_size = 9
 theme_override_font_sizes/bold_font_size = 9
 horizontal_alignment = 1
 
-[node name="Key1" type="AudioStreamPlayer" parent="." unique_id=606479582]
-stream = ExtResource("6_chdqg")
-
-[node name="Key2" type="AudioStreamPlayer" parent="." unique_id=736375992]
-stream = ExtResource("7_cxlhv")
-
-[node name="Key3" type="AudioStreamPlayer" parent="." unique_id=2137852216]
-stream = ExtResource("8_ntodn")
-
 [node name="Key4" type="AudioStreamPlayer" parent="." unique_id=756872356]
 stream = ExtResource("9_1ggaw")
 
 [node name="Key5" type="AudioStreamPlayer" parent="." unique_id=1912665087]
 stream = ExtResource("10_cxlhv")
-
-[node name="Key6" type="AudioStreamPlayer" parent="." unique_id=2036806543]
-stream = ExtResource("10_244c1")
 
 [node name="Key7" type="AudioStreamPlayer" parent="." unique_id=1042032595]
 stream = ExtResource("11_w6237")
