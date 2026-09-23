@@ -1,6 +1,9 @@
 extends Node2D
 
+
 signal facing_emit(facing)
+
+@onready var steps = [$StepLth1, $StepLth2, $StepLth3, $StepLth4]
 
 var facing: Node2D
 var opposite: Node2D
@@ -38,6 +41,11 @@ func game_over() -> void:
 func game_win() -> void:
 	get_tree().change_scene_to_file("res://scenes/win.tscn")
 	
+func step_sound() -> void:
+	for step in steps:
+		step.play()
+		await get_tree().create_timer(0.22).timeout
+	
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("Look"):
 		facing_emit.emit(null)
@@ -46,6 +54,7 @@ func _input(event: InputEvent) -> void:
 		else:
 			opposite = $Monitor
 		
+		step_sound()
 		await create_tween().tween_property(facing, "position:y", -300.0, 0.35).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN).finished
 
 		facing.visible = false

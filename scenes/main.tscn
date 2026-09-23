@@ -3,6 +3,10 @@
 [ext_resource type="Script" uid="uid://23157tdlroai" path="res://scripts/switch.gd" id="1_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://dtxn1s6ot4c1p" path="res://scenes/doors.tscn" id="1_sugp2"]
 [ext_resource type="PackedScene" uid="uid://ctaf5on586bnm" path="res://scenes/monitor.tscn" id="2_jyhfs"]
+[ext_resource type="AudioStream" uid="uid://krm7cgpx7q1l" path="res://assets/audios/human_body_sound/running/step_lth1.ogg" id="4_o6xl0"]
+[ext_resource type="AudioStream" uid="uid://c61faq6j62ota" path="res://assets/audios/human_body_sound/running/step_lth2.ogg" id="5_tipki"]
+[ext_resource type="AudioStream" uid="uid://b3i34aanlojse" path="res://assets/audios/human_body_sound/running/step_lth3.ogg" id="6_85g3d"]
+[ext_resource type="AudioStream" uid="uid://rbs42gsronns" path="res://assets/audios/human_body_sound/running/step_lth4.ogg" id="7_choun"]
 
 [node name="Main" type="Node2D" unique_id=1762041060]
 script = ExtResource("1_jyhfs")
@@ -16,3 +20,15 @@ offset_right = 480.0
 offset_bottom = 270.0
 mouse_filter = 2
 color = Color(0, 0, 0, 1)
+
+[node name="StepLth1" type="AudioStreamPlayer" parent="." unique_id=1371497886]
+stream = ExtResource("4_o6xl0")
+
+[node name="StepLth2" type="AudioStreamPlayer" parent="." unique_id=351116420]
+stream = ExtResource("5_tipki")
+
+[node name="StepLth3" type="AudioStreamPlayer" parent="." unique_id=345632096]
+stream = ExtResource("6_85g3d")
+
+[node name="StepLth4" type="AudioStreamPlayer" parent="." unique_id=1825686426]
+stream = ExtResource("7_choun")
