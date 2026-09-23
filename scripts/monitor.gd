@@ -32,7 +32,7 @@ func _ready() -> void:
 
 	counter.clear()
 	counter.push_color(Color.GREEN)
-	counter.add_text(str(sentences_completed) + "/" + "40")
+	counter.add_text(str(sentences_completed) + "/" + "30")
 	counter.pop()
 
 	return generate_new_sentence()
@@ -100,10 +100,10 @@ func _unhandled_input(event: InputEvent) -> void:
 		
 		counter.clear()
 		counter.push_color(Color.GREEN)
-		counter.add_text(str(sentences_completed) + "/" + "40")
+		counter.add_text(str(sentences_completed) + "/" + "30")
 		counter.pop()
 
-		if sentences_completed >= 40:
+		if sentences_completed >= 30:
 			main.game_win()
 		else:
 			generate_new_sentence()
