@@ -48,6 +48,7 @@ func step_sound() -> void:
 	
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("Look"):
+		set_process_input(false)
 		facing_emit.emit(null)
 		if facing == $Monitor:
 			opposite = $Doors
@@ -68,3 +69,4 @@ func _input(event: InputEvent) -> void:
 
 		facing = opposite
 		facing_emit.emit(facing)
+		set_process_input(true)
