@@ -1,6 +1,7 @@
 extends Node2D
 
 @onready var main = get_parent()
+@onready var status: Label = $Status
 
 const UNLIT = preload("res://assets/objects/Door.png")
 const LIT1S0 = preload("res://assets/objects/stage_0_room_1.png")
@@ -23,6 +24,7 @@ var monster_stage = 0
 var cooldown = 0
 var zap_flickering = 0
 var zap_door = 0
+var pulse = 0.0
 var doors = false
 
 func _ready() -> void:
@@ -48,8 +50,14 @@ func _input(event: InputEvent) -> void:
 
 
 func _process(_delta: float) -> void:
+	pulse += _delta
 	if cooldown > 0.0:
 		cooldown -= _delta
+		status.text = "%.1f" % cooldown
+		status.modulate = Color("#f29a42").lerp(Color("#d26f0c"), sin(pulse * 7.0))
+	else:
+		status.text = "ZAP READY"
+		status.modulate = Color("#6f92ec").lerp(Color("#d7e963"), sin(pulse * 2.0))
 
 	var zap_flash = false
 	if zap_flickering > 0:

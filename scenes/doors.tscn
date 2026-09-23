@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bb2iqbqrvd6fl" path="res://assets/backgrounds/background_dark.png" id="1_5v6d3"]
 [ext_resource type="Script" uid="uid://c4lng3le77fkp" path="res://scripts/doors.gd" id="1_doors"]
 [ext_resource type="Texture2D" uid="uid://bq8el5ybrwr7k" path="res://assets/objects/Door.png" id="2_26m4p"]
+[ext_resource type="FontFile" uid="uid://d3jtcfuop2v6r" path="res://assets/fonts/PixelifySans-Regular.ttf" id="4_ctrmn"]
 
 [node name="Node2D" type="Node2D" unique_id=1469646759]
 script = ExtResource("1_doors")
@@ -22,3 +23,13 @@ texture = ExtResource("2_26m4p")
 [node name="Door3" type="Sprite2D" parent="." unique_id=259690554]
 position = Vector2(392, 128)
 texture = ExtResource("2_26m4p")
+
+[node name="Status" type="Label" parent="." unique_id=1328068757]
+offset_left = 167.0
+offset_top = 234.0
+offset_right = 317.0
+offset_bottom = 264.0
+theme_override_fonts/font = ExtResource("4_ctrmn")
+theme_override_font_sizes/font_size = 24
+horizontal_alignment = 1
+vertical_alignment = 1
