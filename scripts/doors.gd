@@ -2,6 +2,8 @@ extends Node2D
 
 @onready var main = get_parent()
 @onready var status: Label = $Status
+@onready var light_sound = $LightDecomposed
+@onready var zap_sound = $Zap
 
 const UNLIT = preload("res://assets/objects/Door.png")
 const LIT1S0 = preload("res://assets/objects/stage_0_room_1.png")
@@ -25,6 +27,7 @@ var cooldown = 0
 var zap_flickering = 0
 var zap_door = 0
 var pulse = 0.0
+var previous = 0
 var doors = false
 
 func _ready() -> void:
@@ -45,6 +48,7 @@ func _input(event: InputEvent) -> void:
 			zap_door = 3
 		
 		if zap_door > 0:
+			zap_sound.play()
 			zap_flickering = 1.8
 			cooldown = 10.0
 
@@ -167,3 +171,9 @@ func _process(_delta: float) -> void:
 				$Door3.texture = LIT3S0
 		else:
 			$Door3.texture = UNLIT
+		
+		if input != 0 and previous == 0:
+			light_sound.play()
+		elif input == 0 and previous != 0:
+			light_sound.stop()
+		previous = input

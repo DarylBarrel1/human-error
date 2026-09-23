@@ -4,6 +4,8 @@
 [ext_resource type="Script" uid="uid://c4lng3le77fkp" path="res://scripts/doors.gd" id="1_doors"]
 [ext_resource type="Texture2D" uid="uid://bq8el5ybrwr7k" path="res://assets/objects/Door.png" id="2_26m4p"]
 [ext_resource type="FontFile" uid="uid://d3jtcfuop2v6r" path="res://assets/fonts/PixelifySans-Regular.ttf" id="4_ctrmn"]
+[ext_resource type="AudioStream" uid="uid://xsrigbsxmyjm" path="res://assets/audios/zap/Light_Decomposed.wav" id="5_6xqom"]
+[ext_resource type="AudioStream" uid="uid://m6dgsv7a8meh" path="res://assets/audios/zap/Zap_electricspell1.wav" id="6_78wek"]
 
 [node name="Node2D" type="Node2D" unique_id=1469646759]
 script = ExtResource("1_doors")
@@ -33,3 +35,11 @@ theme_override_fonts/font = ExtResource("4_ctrmn")
 theme_override_font_sizes/font_size = 24
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="LightDecomposed" type="AudioStreamPlayer" parent="." unique_id=1136372717]
+stream = ExtResource("5_6xqom")
+volume_db = -1.836
+
+[node name="Zap" type="AudioStreamPlayer" parent="." unique_id=900380000]
+stream = ExtResource("6_78wek")
+volume_db = 5.506
