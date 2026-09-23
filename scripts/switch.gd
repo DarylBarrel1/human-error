@@ -4,6 +4,7 @@ extends Node2D
 signal facing_emit(facing)
 
 @onready var steps = [$StepLth1, $StepLth2, $StepLth3, $StepLth4]
+@onready var jumpscare = $Jumpscare
 
 var facing: Node2D
 var opposite: Node2D
@@ -12,6 +13,7 @@ var timer = 10.0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	jumpscare.visible = false
 	facing = $Monitor
 	$Monitor.visible = true
 	$Doors.visible = false
@@ -36,6 +38,18 @@ func _process(delta: float) -> void:
 			game_over()
 			
 func game_over() -> void:
+	set_process(false)
+	jumpscare.visible = true
+	var starting_position = jumpscare.position
+	Jumpscare.jumpscare()
+	
+	for i in range(32):
+		jumpscare.position = starting_position + Vector2(randf_range(-28, 28), randf_range(-15, 15))
+		await get_tree().create_timer(0.05).timeout
+	
+	jumpscare.position = starting_position
+	await get_tree().create_timer(0.35).timeout
+	
 	get_tree().change_scene_to_file("res://scenes/lose.tscn")
 
 func game_win() -> void:

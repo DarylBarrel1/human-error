@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://dtxn1s6ot4c1p" path="res://scenes/doors.tscn" id="1_sugp2"]
 [ext_resource type="PackedScene" uid="uid://ctaf5on586bnm" path="res://scenes/monitor.tscn" id="2_jyhfs"]
 [ext_resource type="AudioStream" uid="uid://krm7cgpx7q1l" path="res://assets/audios/human_body_sound/running/step_lth1.ogg" id="4_o6xl0"]
+[ext_resource type="Texture2D" uid="uid://bvdhjvjik2o85" path="res://assets/objects/monster_face.png" id="4_tipki"]
 [ext_resource type="AudioStream" uid="uid://c61faq6j62ota" path="res://assets/audios/human_body_sound/running/step_lth2.ogg" id="5_tipki"]
 [ext_resource type="AudioStream" uid="uid://b3i34aanlojse" path="res://assets/audios/human_body_sound/running/step_lth3.ogg" id="6_85g3d"]
 [ext_resource type="AudioStream" uid="uid://rbs42gsronns" path="res://assets/audios/human_body_sound/running/step_lth4.ogg" id="7_choun"]
@@ -14,6 +15,11 @@ script = ExtResource("1_jyhfs")
 [node name="Doors" parent="." unique_id=1469646759 instance=ExtResource("1_sugp2")]
 
 [node name="Monitor" parent="." unique_id=860135480 instance=ExtResource("2_jyhfs")]
+
+[node name="Jumpscare" type="Sprite2D" parent="." unique_id=1803715544]
+position = Vector2(253.99998, 218.99998)
+scale = Vector2(1.2104025, 1.2104025)
+texture = ExtResource("4_tipki")
 
 [node name="Fade" type="ColorRect" parent="." unique_id=1313626951]
 offset_right = 480.0
