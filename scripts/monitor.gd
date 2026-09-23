@@ -3,13 +3,14 @@ extends Node2D
 @onready var main = get_parent()
 @onready var label: RichTextLabel = $MonitorText
 @onready var counter: RichTextLabel = $CounterText
+@onready var key_sounds = [$Key4, $Key5, $Key7, $Key8, $Key9]
 
 const sentences = [
 	"Something's here",
 	"We have to leave",
 	"Dear mother, I'm sorry but we have created something much worse",
 	"Keep typing keep typing keep typing keep typing",
-	"101011111000101011010101100001001110101100",
+	"10101111100010101101010110000100111010110011011011",
 	"Error 4044444444",
 	"Hey, you have to check this out, I think we just created a new species",
 	"Please help I'm trapped, I'm on the east side at zone 0, we found a way to ...",
@@ -88,6 +89,7 @@ func _unhandled_input(event: InputEvent) -> void:
 		var letter = char(event.unicode).to_upper()
 		typed += letter
 	
+	key_sounds.pick_random().play()
 	label.clear()
 	screen_text_display()
 
