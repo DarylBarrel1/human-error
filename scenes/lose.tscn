@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://cyamrc0i1huqn" path="res://scripts/lose.gd" id="1_vjdtf"]
 [ext_resource type="FontFile" uid="uid://fd8b3mu3qflq" path="res://assets/fonts/PixelifySans-SemiBold.ttf" id="2_10rtl"]
 [ext_resource type="FontFile" uid="uid://d3jtcfuop2v6r" path="res://assets/fonts/PixelifySans-Regular.ttf" id="2_r6nsb"]
+[ext_resource type="AudioStream" uid="uid://boeuiwe46u6on" path="res://assets/audios/lights_buttons_and_clicks/clic10.mp3.wav" id="4_a5bqv"]
+[ext_resource type="AudioStream" uid="uid://cm2lvcrpb6v3r" path="res://assets/audios/lights_buttons_and_clicks/Clic01.mp3.wav" id="5_alj87"]
 
 [node name="Control" type="Control" unique_id=454005585]
 layout_mode = 3
@@ -51,3 +53,19 @@ size_flags_horizontal = 4
 theme_override_fonts/font = ExtResource("2_r6nsb")
 theme_override_font_sizes/font_size = 17
 text = "Return to Main Menu"
+
+[node name="Fade" type="ColorRect" parent="." unique_id=1703860462]
+layout_mode = 0
+offset_right = 480.0
+offset_bottom = 270.0
+mouse_filter = 2
+color = Color(0, 0, 0, 0)
+
+[node name="Hover" type="AudioStreamPlayer" parent="." unique_id=2039794303]
+stream = ExtResource("4_a5bqv")
+
+[node name="Click" type="AudioStreamPlayer" parent="." unique_id=2023108589]
+stream = ExtResource("5_alj87")
+
+[connection signal="mouse_entered" from="Buttons/RetryButton" to="." method="_on_button_hovered"]
+[connection signal="mouse_entered" from="Buttons/QuitButton" to="." method="_on_button_hovered"]
