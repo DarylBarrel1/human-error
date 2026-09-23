@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://c82pna1nn4j6n" path="res://assets/objects/monitor_background.png" id="1_3jcr0"]
 [ext_resource type="Texture2D" uid="uid://d1atggf40y5sh" path="res://assets/objects/monitor.png" id="1_gnqr3"]
 [ext_resource type="Script" uid="uid://blhgb8isbgpbk" path="res://scripts/monitor.gd" id="1_spe5c"]
+[ext_resource type="Texture2D" uid="uid://cnpyommn0tl6b" path="res://assets/objects/background.png" id="4_05xvg"]
 [ext_resource type="FontFile" uid="uid://d3jtcfuop2v6r" path="res://assets/fonts/PixelifySans-Regular.ttf" id="4_bvax4"]
 [ext_resource type="FontFile" uid="uid://d012ceqkbt0a7" path="res://assets/fonts/PixelifySans-Bold.ttf" id="5_cdfrg"]
 [ext_resource type="AudioStream" uid="uid://c04cttd576ijc" path="res://assets/audios/typing/Key4.wav" id="9_1ggaw"]
@@ -23,6 +24,11 @@ texture = ExtResource("1_3jcr0")
 position = Vector2(240, 145)
 scale = Vector2(1.2045454, 1.2045455)
 texture = ExtResource("1_gnqr3")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=120186358]
+z_index = -10
+position = Vector2(242, 134)
+texture = ExtResource("4_05xvg")
 
 [node name="MonitorText" type="RichTextLabel" parent="." unique_id=1956140105]
 offset_left = 160.0
