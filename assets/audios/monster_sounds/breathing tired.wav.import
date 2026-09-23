@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cyfs0sjqe61w3"
+path="res://.godot/imported/breathing tired.wav-066a587d596dfbe5deb2f54b57eb8bb6.sample"
+
+[deps]
+
+source_file="res://assets/audios/monster_sounds/breathing tired.wav"
+dest_files=["res://.godot/imported/breathing tired.wav-066a587d596dfbe5deb2f54b57eb8bb6.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

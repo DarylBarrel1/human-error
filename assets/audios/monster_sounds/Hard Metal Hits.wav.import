@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c58nyc0o6sdgr"
+path="res://.godot/imported/Hard Metal Hits.wav-797dda87e057b4a3d23a1acbd6fe2fbc.sample"
+
+[deps]
+
+source_file="res://assets/audios/monster_sounds/Hard Metal Hits.wav"
+dest_files=["res://.godot/imported/Hard Metal Hits.wav-797dda87e057b4a3d23a1acbd6fe2fbc.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

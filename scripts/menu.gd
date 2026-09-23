@@ -5,6 +5,7 @@ const GAME_SCENE = "res://scenes/main.tscn"
 
 @onready var main_buttons: Control = $MainButtons
 @onready var credits_panel: Control = $CreditsPanel
+@onready var controls_panel: Control = $ControlsPanel
 
 
 func _ready() -> void:
@@ -24,6 +25,10 @@ func _on_credits_pressed() -> void:
 	$Click.play(0.1)
 	_show(credits_panel)
 
+func _on_controls_pressed() -> void:
+	$Click.play(0.1)
+	_show(controls_panel)
+
 
 func _on_back_pressed() -> void:
 	$Click.play(0.1)
@@ -32,9 +37,11 @@ func _on_back_pressed() -> void:
 func _show_main() -> void:
 	main_buttons.show()
 	credits_panel.hide()
+	controls_panel.hide()
 
 
 func _show(panel: Control) -> void:
 	main_buttons.hide()
 	credits_panel.hide()
+	controls_panel.hide()
 	panel.show()

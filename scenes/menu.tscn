@@ -70,6 +70,13 @@ theme_override_fonts/font = ExtResource("4_13sgg")
 theme_override_font_sizes/font_size = 10
 text = "Start Game"
 
+[node name="ControlsButton" type="Button" parent="MainButtons" unique_id=389108523]
+custom_minimum_size = Vector2(110, 26)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_13sgg")
+theme_override_font_sizes/font_size = 10
+text = "Controls"
+
 [node name="CreditsButton" type="Button" parent="MainButtons" unique_id=1263919596]
 custom_minimum_size = Vector2(110, 26)
 layout_mode = 2
@@ -78,6 +85,7 @@ theme_override_font_sizes/font_size = 10
 text = "Credits"
 
 [node name="CreditsPanel" type="Control" parent="." unique_id=570426101]
+visible = false
 anchors_preset = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -164,6 +172,80 @@ theme_override_fonts/font = ExtResource("4_13sgg")
 theme_override_font_sizes/font_size = 10
 text = "Back"
 
+[node name="ControlsPanel" type="Control" parent="." unique_id=705198769]
+anchors_preset = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="DimOverlay" type="ColorRect" parent="ControlsPanel" unique_id=84790338]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+color = Color(0, 0, 0, 0.6)
+
+[node name="Title" type="Label" parent="ControlsPanel" unique_id=1281732317]
+layout_mode = 0
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -100.0
+offset_top = 10.0
+offset_right = 100.0
+offset_bottom = 34.0
+theme_override_fonts/font = ExtResource("3_v86rl")
+theme_override_font_sizes/font_size = 18
+text = "CONTROLS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="List" type="VBoxContainer" parent="ControlsPanel" unique_id=9583281]
+layout_mode = 0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -120.0
+offset_top = -40.0
+offset_right = 120.0
+offset_bottom = 40.0
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="Line1" type="Label" parent="ControlsPanel/List" unique_id=446716201]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_13sgg")
+theme_override_font_sizes/font_size = 10
+text = "Alt – to switch"
+horizontal_alignment = 1
+
+[node name="Line2" type="Label" parent="ControlsPanel/List" unique_id=1575988187]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_13sgg")
+theme_override_font_sizes/font_size = 10
+text = "1 / 2 / 3 – for light"
+horizontal_alignment = 1
+
+[node name="Line3" type="Label" parent="ControlsPanel/List" unique_id=2061549912]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_13sgg")
+theme_override_font_sizes/font_size = 10
+text = "Space – for zap"
+horizontal_alignment = 1
+
+[node name="BackButton" type="Button" parent="ControlsPanel" unique_id=786587844]
+layout_mode = 0
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -30.0
+offset_right = 40.0
+offset_bottom = -6.0
+theme_override_fonts/font = ExtResource("4_13sgg")
+theme_override_font_sizes/font_size = 10
+text = "Back"
+
 [node name="Fade" type="ColorRect" parent="." unique_id=112415843]
 layout_mode = 0
 offset_right = 480.0
@@ -183,6 +265,9 @@ stream = ExtResource("9_i6lef")
 
 [connection signal="mouse_entered" from="MainButtons/StartButton" to="." method="_on_button_hovered"]
 [connection signal="pressed" from="MainButtons/StartButton" to="." method="_on_start_pressed"]
+[connection signal="mouse_entered" from="MainButtons/ControlsButton" to="." method="_on_button_hovered"]
+[connection signal="pressed" from="MainButtons/ControlsButton" to="." method="_on_controls_pressed"]
 [connection signal="mouse_entered" from="MainButtons/CreditsButton" to="." method="_on_button_hovered"]
 [connection signal="pressed" from="MainButtons/CreditsButton" to="." method="_on_credits_pressed"]
 [connection signal="pressed" from="CreditsPanel/BackButton" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="ControlsPanel/BackButton" to="." method="_on_back_pressed"]

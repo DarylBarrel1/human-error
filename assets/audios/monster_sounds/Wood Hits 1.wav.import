@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://63clsd5jhwqj"
+path="res://.godot/imported/Wood Hits 1.wav-f0a400c5b73bf265cbece7432a04cfe9.sample"
+
+[deps]
+
+source_file="res://assets/audios/monster_sounds/Wood Hits 1.wav"
+dest_files=["res://.godot/imported/Wood Hits 1.wav-f0a400c5b73bf265cbece7432a04cfe9.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
