@@ -143,6 +143,7 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("4_13sgg")
 theme_override_font_sizes/font_size = 9
 text = "Sound effects from OpenGameArt.org
+Font Pixelify Sans from Stefie Justprince
 All visuals are originally made by the authors"
 autowrap_mode = 2
 
