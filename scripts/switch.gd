@@ -7,17 +7,21 @@ signal facing_emit(facing)
 @onready var jumpscare = $Jumpscare
 @onready var researcher = $Researcher
 @onready var background = $Background
+@onready var countdownText = $CountdownText
+@onready var muteText = $MuteText
 
 @onready var monster_sounds = [$monster_button, $monster_hit, $monster_metal_hit, $monster_scroutch, $monster_zombie_pain, $monster_bottle_break, $monster_door, $monster_jump]
 
 var facing: Node2D
 var opposite: Node2D
 
+var countdown = 270.0
 var timer = 10.0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	jumpscare.visible = false
+	$Options/Control.visible = false
 	facing = $Monitor
 	$Monitor.visible = true
 	$Doors.visible = false
@@ -27,9 +31,19 @@ func _ready() -> void:
 	create_tween().tween_property($Fade, "color:a", 0.0, 2.5)
 	researcher.play()
 	await get_tree().create_timer(40.0).timeout
+	muteText.hide()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	if get_tree().paused:
+		return
+	countdown -= delta
+	if countdown <= 0:
+		countdown = 0
+		game_over()
+		return
+	countdownText.text = "%d:%02d" % [int(countdown) / 60, int(countdown) % 60]
+
 	if $Doors.zap_flickering > 0:
 		return
 
@@ -78,6 +92,8 @@ func step_sound() -> void:
 		await get_tree().create_timer(0.22).timeout
 	
 func _input(event: InputEvent) -> void:
+	if get_tree().paused:
+		return 
 	if event.is_action_pressed("Look"):
 		set_process_input(false)
 		facing_emit.emit(null)
@@ -101,6 +117,24 @@ func _input(event: InputEvent) -> void:
 		facing = opposite
 		facing_emit.emit(facing)
 		set_process_input(true)
+	elif event.is_action_pressed("Pause"):
+		$Options/Control.visible = not $Options/Control.visible
+		pause($Options/Control.visible)
 	elif event.is_action_pressed("Mute"):
 		researcher.stop()
 		$MuteText.hide()
+
+func pause(val: bool) -> void:
+	get_tree().paused = val
+	for child in get_children():
+		if child is AudioStreamPlayer:
+			child.stream_paused = val
+
+func unpause() -> void:
+	$Options/Control.visible = false
+	pause(false)
+	
+func quit() -> void:
+	get_tree().paused = false
+	get_tree().change_scene_to_file("res://scenes/menu.tscn")
+	

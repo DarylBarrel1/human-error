@@ -51,15 +51,18 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="MainButtons" type="VBoxContainer" parent="." unique_id=1562995088]
-layout_mode = 0
+layout_mode = 1
+anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -55.0
-offset_top = -70.0
-offset_right = 55.0
-offset_bottom = 70.0
+offset_left = -63.0
+offset_top = -68.0
+offset_right = 64.0
+offset_bottom = 72.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_constants/separation = 14
 alignment = 1
 
@@ -75,7 +78,7 @@ custom_minimum_size = Vector2(110, 26)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("4_13sgg")
 theme_override_font_sizes/font_size = 10
-text = "Controls"
+text = "Controls & Instructions"
 
 [node name="CreditsButton" type="Button" parent="MainButtons" unique_id=1263919596]
 custom_minimum_size = Vector2(110, 26)
@@ -185,13 +188,15 @@ mouse_filter = 2
 color = Color(0, 0, 0, 0.6)
 
 [node name="Title" type="Label" parent="ControlsPanel" unique_id=1281732317]
-layout_mode = 0
+layout_mode = 1
+anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -100.0
-offset_top = 10.0
+offset_top = 12.0
 offset_right = 100.0
-offset_bottom = 34.0
+offset_bottom = 36.0
+grow_horizontal = 2
 theme_override_fonts/font = ExtResource("3_v86rl")
 theme_override_font_sizes/font_size = 18
 text = "CONTROLS"
@@ -199,15 +204,18 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="List" type="VBoxContainer" parent="ControlsPanel" unique_id=9583281]
-layout_mode = 0
+layout_mode = 1
+anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -120.0
-offset_top = -40.0
+offset_top = -107.0
 offset_right = 120.0
-offset_bottom = 40.0
+offset_bottom = -27.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_constants/separation = 10
 alignment = 1
 
@@ -215,21 +223,74 @@ alignment = 1
 layout_mode = 2
 theme_override_fonts/font = ExtResource("4_13sgg")
 theme_override_font_sizes/font_size = 10
-text = "Alt – to switch"
+text = "Alt – to look at your monitor or the doors"
 horizontal_alignment = 1
 
 [node name="Line2" type="Label" parent="ControlsPanel/List" unique_id=1575988187]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("4_13sgg")
 theme_override_font_sizes/font_size = 10
-text = "1 / 2 / 3 – for light"
+text = "1 / 2 / 3 – to turn on the lights"
 horizontal_alignment = 1
 
 [node name="Line3" type="Label" parent="ControlsPanel/List" unique_id=2061549912]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("4_13sgg")
 theme_override_font_sizes/font_size = 10
-text = "Hold 1 / 2 / 3 + Space – to zap"
+text = "Holding  1 / 2 / 3 + Space – to zap"
+horizontal_alignment = 1
+
+[node name="Title2" type="Label" parent="ControlsPanel" unique_id=1780835937]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -100.0
+offset_top = 114.0
+offset_right = 100.0
+offset_bottom = 138.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("3_v86rl")
+theme_override_font_sizes/font_size = 18
+text = "GOAL OF THE GAME"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="List2" type="VBoxContainer" parent="ControlsPanel" unique_id=1044265135]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 145.0
+offset_right = 455.0
+offset_bottom = 227.0
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="Line1" type="Label" parent="ControlsPanel/List2" unique_id=810128706]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_13sgg")
+theme_override_font_sizes/font_size = 10
+text = "Correctly Re-type all the sentences on your monitor in order to win."
+horizontal_alignment = 1
+
+[node name="Line2" type="Label" parent="ControlsPanel/List2" unique_id=1360515078]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_13sgg")
+theme_override_font_sizes/font_size = 10
+text = "Press ALT to turn around, then hold 1/2/3 to light a door and space to zap the monster"
+horizontal_alignment = 1
+
+[node name="Line3" type="Label" parent="ControlsPanel/List2" unique_id=1093391677]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_13sgg")
+theme_override_font_sizes/font_size = 10
+text = "If the monster is zapped, the monster will temporarily leave"
+horizontal_alignment = 1
+
+[node name="Line4" type="Label" parent="ControlsPanel/List2" unique_id=1131199490]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_13sgg")
+theme_override_font_sizes/font_size = 10
+text = "Beat the clock, and whatever is in the halls"
 horizontal_alignment = 1
 
 [node name="BackButton" type="Button" parent="ControlsPanel" unique_id=786587844]

@@ -6,6 +6,7 @@
 [ext_resource type="AudioStream" uid="uid://krm7cgpx7q1l" path="res://assets/audios/human_body_sound/running/step_lth1.ogg" id="4_o6xl0"]
 [ext_resource type="Texture2D" uid="uid://bvdhjvjik2o85" path="res://assets/objects/monster_face.png" id="4_tipki"]
 [ext_resource type="AudioStream" uid="uid://k1ii8o50ls0j" path="res://assets/audios/intro/announcer.mp3" id="5_85g3d"]
+[ext_resource type="PackedScene" uid="uid://c3ufhpfa58pol" path="res://scenes/control.tscn" id="5_gqmmt"]
 [ext_resource type="AudioStream" uid="uid://c61faq6j62ota" path="res://assets/audios/human_body_sound/running/step_lth2.ogg" id="5_tipki"]
 [ext_resource type="AudioStream" uid="uid://b3i34aanlojse" path="res://assets/audios/human_body_sound/running/step_lth3.ogg" id="6_85g3d"]
 [ext_resource type="AudioStream" uid="uid://bxsdvvbcuco34" path="res://assets/audios/BGM/static9.wav" id="6_choun"]
@@ -25,11 +26,14 @@ data = PackedByteArray("cW9hZgAAKPkBAKxEFAAIGAAAAAAAAAAAAAAAAOAAQABtwSASCAQSmkoI
 format = 3
 
 [node name="Main" type="Node2D" unique_id=1762041060]
+process_mode = 3
 script = ExtResource("1_jyhfs")
 
 [node name="Doors" parent="." unique_id=1469646759 instance=ExtResource("1_sugp2")]
+process_mode = 1
 
 [node name="Monitor" parent="." unique_id=860135480 instance=ExtResource("2_jyhfs")]
+process_mode = 1
 
 [node name="Jumpscare" type="Sprite2D" parent="." unique_id=1803715544]
 position = Vector2(253.99998, 218.99998)
@@ -41,6 +45,11 @@ offset_right = 480.0
 offset_bottom = 270.0
 mouse_filter = 2
 color = Color(0, 0, 0, 1)
+
+[node name="Options" type="CanvasLayer" parent="." unique_id=950695540]
+process_mode = 3
+
+[node name="Control" parent="Options" unique_id=2047312351 instance=ExtResource("5_gqmmt")]
 
 [node name="Researcher" type="AudioStreamPlayer" parent="." unique_id=1887168172]
 stream = ExtResource("5_85g3d")
@@ -61,14 +70,32 @@ stream = ExtResource("6_85g3d")
 [node name="StepLth4" type="AudioStreamPlayer" parent="." unique_id=1825686426]
 stream = ExtResource("7_choun")
 
+[node name="CountdownText" type="Label" parent="." unique_id=5196468]
+offset_left = 215.0
+offset_top = 3.0
+offset_right = 255.0
+offset_bottom = 26.0
+theme_override_fonts/font = ExtResource("11_ya4ey")
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="MuteText" type="Label" parent="." unique_id=1554567788]
 offset_left = 270.0
-offset_top = 249.0
+offset_top = 253.0
 offset_right = 535.0
-offset_bottom = 272.0
+offset_bottom = 276.0
 theme_override_fonts/font = ExtResource("11_ya4ey")
 theme_override_font_sizes/font_size = 10
 text = "Press 'CapsLock' to mute the researcher"
+
+[node name="PauseText" type="Label" parent="." unique_id=96503801]
+offset_left = 374.0
+offset_top = 4.0
+offset_right = 639.0
+offset_bottom = 27.0
+theme_override_fonts/font = ExtResource("11_ya4ey")
+theme_override_font_sizes/font_size = 10
+text = "Press 'esc' to pause"
 
 [node name="monster_button" type="AudioStreamPlayer" parent="." unique_id=980415604]
 stream = ExtResource("12_gqmmt")
@@ -104,3 +131,8 @@ volume_db = -26.16
 
 [node name="paranoia_wind" type="AudioStreamPlayer" parent="." unique_id=505271246]
 stream = ExtResource("20_2f3dj")
+
+[connection signal="pressed" from="Options/Control/BackButton" to="." method="unpause"]
+[connection signal="pressed" from="Options/Control/QuitButton" to="." method="quit"]
+
+[editable path="Options/Control"]

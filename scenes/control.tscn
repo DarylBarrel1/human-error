@@ -1,0 +1,159 @@
+[gd_scene format=3 uid="uid://c3ufhpfa58pol"]
+
+[ext_resource type="FontFile" uid="uid://d012ceqkbt0a7" path="res://assets/fonts/PixelifySans-Bold.ttf" id="1_r67kn"]
+[ext_resource type="FontFile" uid="uid://d3jtcfuop2v6r" path="res://assets/fonts/PixelifySans-Regular.ttf" id="2_brbbq"]
+
+[node name="Control" type="Control" unique_id=2047312351]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="DimOverlay" type="ColorRect" parent="." unique_id=1601977783]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+color = Color(0, 0, 0, 0.6)
+
+[node name="Title" type="Label" parent="." unique_id=759676468]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -100.0
+offset_top = 12.0
+offset_right = 100.0
+offset_bottom = 36.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("1_r67kn")
+theme_override_font_sizes/font_size = 18
+text = "CONTROLS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="List" type="VBoxContainer" parent="." unique_id=2045567373]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -120.0
+offset_top = -107.0
+offset_right = 120.0
+offset_bottom = -27.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="Line1" type="Label" parent="List" unique_id=2070257604]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_brbbq")
+theme_override_font_sizes/font_size = 10
+text = "Alt – to look at your monitor or the doors"
+horizontal_alignment = 1
+
+[node name="Line2" type="Label" parent="List" unique_id=1742198450]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_brbbq")
+theme_override_font_sizes/font_size = 10
+text = "1 / 2 / 3 – to turn on the lights"
+horizontal_alignment = 1
+
+[node name="Line3" type="Label" parent="List" unique_id=1531435708]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_brbbq")
+theme_override_font_sizes/font_size = 10
+text = "Holding  1 / 2 / 3 + Space – to zap"
+horizontal_alignment = 1
+
+[node name="Title2" type="Label" parent="." unique_id=1061025780]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -100.0
+offset_top = 108.0
+offset_right = 100.0
+offset_bottom = 132.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("1_r67kn")
+theme_override_font_sizes/font_size = 18
+text = "GOAL OF THE GAME"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="List2" type="VBoxContainer" parent="." unique_id=194965305]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 133.0
+offset_right = 455.0
+offset_bottom = 215.0
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="Line1" type="Label" parent="List2" unique_id=1830856948]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_brbbq")
+theme_override_font_sizes/font_size = 10
+text = "Correctly Re-type all the sentences on your monitor in order to win."
+horizontal_alignment = 1
+
+[node name="Line2" type="Label" parent="List2" unique_id=275651657]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_brbbq")
+theme_override_font_sizes/font_size = 10
+text = "Press ALT to turn around, then hold 1/2/3 to light a door and space to zap the monster"
+horizontal_alignment = 1
+
+[node name="Line3" type="Label" parent="List2" unique_id=243719249]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_brbbq")
+theme_override_font_sizes/font_size = 10
+text = "If the monster is zapped, the monster will temporarily leave"
+horizontal_alignment = 1
+
+[node name="Line4" type="Label" parent="List2" unique_id=213487259]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_brbbq")
+theme_override_font_sizes/font_size = 10
+text = "Beat the clock, and whatever is in the halls"
+horizontal_alignment = 1
+
+[node name="BackButton" type="Button" parent="." unique_id=482988177]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -88.0
+offset_top = -47.0
+offset_right = -8.0
+offset_bottom = -23.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("2_brbbq")
+theme_override_font_sizes/font_size = 10
+text = "Back"
+
+[node name="QuitButton" type="Button" parent="." unique_id=1553890396]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_top = -47.0
+offset_right = 79.0
+offset_bottom = -23.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("2_brbbq")
+theme_override_font_sizes/font_size = 10
+text = "Quit"
