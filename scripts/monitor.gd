@@ -32,7 +32,7 @@ const sentences = [
 	"We have created something sinister, far beyond our understanding",
 	"Be careful what you wish for, often the end result isn't ...",
 	"When in doubt. RUN",
-	"Stay ALIVE"
+	"Stay ALIVE",
 	"Stay calm, follow the instructions, and you MAY just make it out alive",
 	"Remember, you can't afford to let them out",
 	"Somethings here. Worry not, zap to keep them away",
