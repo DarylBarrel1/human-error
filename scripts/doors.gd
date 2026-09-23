@@ -94,11 +94,19 @@ func _process(_delta: float) -> void:
 		zap_flickering -= _delta
 
 	if doors:
+		var input = 0
+		if Input.is_action_pressed("Door1_Lit"):
+			input = 1
+		elif Input.is_action_pressed("Door2_Lit"):
+			input = 2
+		elif Input.is_action_pressed("Door3_Lit"):
+			input = 3
+
 		var condition = false
 		if zap_flickering > 0 and zap_door == 1:
 			condition = zap_flash
 		else:
-			condition = Input.is_action_pressed("Door1_Lit")
+			condition = input == 1
 		if condition:
 			if monster_door == 1:
 				if monster_stage == 0:
@@ -117,7 +125,7 @@ func _process(_delta: float) -> void:
 		if zap_flickering > 0 and zap_door == 2:
 			condition = zap_flash
 		else:
-			condition = Input.is_action_pressed("Door2_Lit")
+			condition = input == 2
 		if condition:
 			if monster_door == 2:
 				if monster_stage == 0:
@@ -136,7 +144,7 @@ func _process(_delta: float) -> void:
 		if zap_flickering > 0 and zap_door == 3:
 			condition = zap_flash
 		else:
-			condition = Input.is_action_pressed("Door3_Lit")
+			condition = input == 3
 		if condition:
 			if monster_door == 3:
 				if monster_stage == 0:
