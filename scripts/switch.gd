@@ -5,6 +5,8 @@ signal facing_emit(facing)
 
 @onready var steps = [$StepLth1, $StepLth2, $StepLth3, $StepLth4]
 @onready var jumpscare = $Jumpscare
+@onready var researcher = $Researcher
+@onready var background = $Background
 
 var facing: Node2D
 var opposite: Node2D
@@ -19,6 +21,8 @@ func _ready() -> void:
 	$Doors.visible = false
 	$Fade.color.a = 1.0
 	await get_tree().create_timer(0.5).timeout 
+	researcher.play()
+	background.play()
 	create_tween().tween_property($Fade, "color:a", 0.0, 2.5)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -84,3 +88,6 @@ func _input(event: InputEvent) -> void:
 		facing = opposite
 		facing_emit.emit(facing)
 		set_process_input(true)
+	elif event.is_action_pressed("Mute"):
+		researcher.stop()
+		$MuteText.hide()
