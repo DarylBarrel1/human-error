@@ -101,7 +101,7 @@ func _process(_delta: float) -> void:
 			if monster_door == zap_door:
 				monster_door = 0
 				monster_stage = 0
-				main.timer = randf_range(5, 20)
+				main.timer = randf_range(10, 22)
 
 		zap_flickering -= _delta
 

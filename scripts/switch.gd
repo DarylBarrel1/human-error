@@ -8,6 +8,8 @@ signal facing_emit(facing)
 @onready var researcher = $Researcher
 @onready var background = $Background
 
+@onready var monster_sounds = [$monster_button, $monster_hit, $monster_metal_hit, $monster_scroutch, $monster_zombie_pain, $monster_bottle_break, $monster_door, $monster_jump]
+
 var facing: Node2D
 var opposite: Node2D
 
@@ -21,9 +23,10 @@ func _ready() -> void:
 	$Doors.visible = false
 	$Fade.color.a = 1.0
 	await get_tree().create_timer(0.5).timeout 
-	researcher.play()
 	background.play()
 	create_tween().tween_property($Fade, "color:a", 0.0, 2.5)
+	researcher.play()
+	await get_tree().create_timer(40.0).timeout
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -32,9 +35,17 @@ func _process(delta: float) -> void:
 
 	timer -= delta
 	if timer <= 0.0:
-		timer = randf_range(5, 20)
+		timer = randf_range(10, 22)
 		if $Doors.monster_stage < 3:
-			# TODO: PLAY MONSTER AUDIO HERE
+			var sound = monster_sounds.pick_random()
+			if $Doors.monster_stage == 1:
+				sound.volume_db = -40
+			elif $Doors.monster_stage == 2:
+				sound.volume_db = -30
+			else:
+				sound.volume_db = -15
+			sound.play()
+			
 			if $Doors.monster_door == 0:
 				$Doors.monster_door = randi_range(1, 3)
 			$Doors.monster_stage += 1
@@ -42,6 +53,8 @@ func _process(delta: float) -> void:
 			game_over()
 			
 func game_over() -> void:
+	researcher.stop()
+	background.stop()
 	set_process(false)
 	jumpscare.visible = true
 	var starting_position = jumpscare.position

@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://bcpulwrpyfgw3"]
+[gd_scene format=4 uid="uid://bcpulwrpyfgw3"]
 
 [ext_resource type="Script" uid="uid://23157tdlroai" path="res://scripts/switch.gd" id="1_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://dtxn1s6ot4c1p" path="res://scenes/doors.tscn" id="1_sugp2"]
@@ -11,6 +11,18 @@
 [ext_resource type="AudioStream" uid="uid://bxsdvvbcuco34" path="res://assets/audios/BGM/static9.wav" id="6_choun"]
 [ext_resource type="AudioStream" uid="uid://rbs42gsronns" path="res://assets/audios/human_body_sound/running/step_lth4.ogg" id="7_choun"]
 [ext_resource type="FontFile" uid="uid://d3jtcfuop2v6r" path="res://assets/fonts/PixelifySans-Regular.ttf" id="11_ya4ey"]
+[ext_resource type="AudioStream" uid="uid://5sitjyb5jupk" path="res://assets/audios/monster_sounds/button01.mp3.wav" id="12_gqmmt"]
+[ext_resource type="AudioStream" uid="uid://8gjnsws1b4dr" path="res://assets/audios/monster_sounds/Metal Hit 4.wav" id="14_jscy8"]
+[ext_resource type="AudioStream" uid="uid://eu0k41lr2hyc" path="res://assets/audios/monster_sounds/scroutch.ogg" id="15_pm3ni"]
+[ext_resource type="AudioStream" uid="uid://b00qc2i1qmcou" path="res://assets/audios/monster_sounds/zombie_pain.wav" id="16_y6deb"]
+[ext_resource type="AudioStream" uid="uid://cfym123pyihuo" path="res://assets/audios/monster_sounds/Bottle Break.wav" id="17_og1vs"]
+[ext_resource type="AudioStream" uid="uid://b4hysorpa1cj3" path="res://assets/audios/monster_sounds/monster_door.mp3" id="18_2wyq8"]
+[ext_resource type="AudioStream" uid="uid://6wfoxh0nxaa2" path="res://assets/audios/monster_sounds/Jump 1.wav" id="19_vxglm"]
+[ext_resource type="AudioStream" uid="uid://b4250csp3r6vr" path="res://assets/audios/monster_sounds/Wind.ogg" id="20_2f3dj"]
+
+[sub_resource type="AudioStreamWAV" id="AudioStreamWAV_0ld40"]
+data = PackedByteArray("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")
+format = 3
 
 [node name="Main" type="Node2D" unique_id=1762041060]
 script = ExtResource("1_jyhfs")
@@ -35,7 +47,7 @@ stream = ExtResource("5_85g3d")
 
 [node name="Background" type="AudioStreamPlayer" parent="." unique_id=1679911288]
 stream = ExtResource("6_choun")
-volume_db = -40.377
+volume_db = -40.988
 
 [node name="StepLth1" type="AudioStreamPlayer" parent="." unique_id=1371497886]
 stream = ExtResource("4_o6xl0")
@@ -57,3 +69,38 @@ offset_bottom = 272.0
 theme_override_fonts/font = ExtResource("11_ya4ey")
 theme_override_font_sizes/font_size = 10
 text = "Press 'CapsLock' to mute the researcher"
+
+[node name="monster_button" type="AudioStreamPlayer" parent="." unique_id=980415604]
+stream = ExtResource("12_gqmmt")
+volume_db = -27.529
+
+[node name="monster_hit" type="AudioStreamPlayer" parent="." unique_id=2049390634]
+stream = SubResource("AudioStreamWAV_0ld40")
+volume_db = -27.435
+
+[node name="monster_metal_hit" type="AudioStreamPlayer" parent="." unique_id=915029170]
+stream = ExtResource("14_jscy8")
+volume_db = -54.872
+
+[node name="monster_scroutch" type="AudioStreamPlayer" parent="." unique_id=103816855]
+stream = ExtResource("15_pm3ni")
+volume_db = -18.503
+
+[node name="monster_zombie_pain" type="AudioStreamPlayer" parent="." unique_id=1541497151]
+stream = ExtResource("16_y6deb")
+volume_db = -14.524
+
+[node name="monster_bottle_break" type="AudioStreamPlayer" parent="." unique_id=206672583]
+stream = ExtResource("17_og1vs")
+volume_db = -33.178
+
+[node name="monster_door" type="AudioStreamPlayer" parent="." unique_id=396051100]
+stream = ExtResource("18_2wyq8")
+volume_db = -22.969
+
+[node name="monster_jump" type="AudioStreamPlayer" parent="." unique_id=769707077]
+stream = ExtResource("19_vxglm")
+volume_db = -26.16
+
+[node name="paranoia_wind" type="AudioStreamPlayer" parent="." unique_id=505271246]
+stream = ExtResource("20_2f3dj")

@@ -10,7 +10,6 @@ const sentences = [
 	"We have to leave",
 	"Dear mother, I'm sorry but we have created something much worse",
 	"Keep typing keep typing keep typing keep typing",
-	"10101111100010101101010110000100111010110011011011",
 	"011011010110111101101110011000010111001101101000",
 	"Error 4044444444",
 	"Hey, you have to check this out, I think we just created a new species",
