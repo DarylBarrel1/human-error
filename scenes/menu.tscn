@@ -161,6 +161,13 @@ theme_override_fonts/font = ExtResource("4_13sgg")
 theme_override_font_sizes/font_size = 10
 text = "Back"
 
+[node name="Fade" type="ColorRect" parent="." unique_id=112415843]
+layout_mode = 0
+offset_right = 480.0
+offset_bottom = 270.0
+mouse_filter = 2
+color = Color(0, 0, 0, 0)
+
 [connection signal="pressed" from="MainButtons/StartButton" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="MainButtons/CreditsButton" to="." method="_on_credits_pressed"]
 [connection signal="pressed" from="CreditsPanel/BackButton" to="." method="_on_back_pressed"]

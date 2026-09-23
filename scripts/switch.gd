@@ -12,6 +12,9 @@ func _ready() -> void:
 	facing = $Monitor
 	$Monitor.visible = true
 	$Doors.visible = false
+	$Fade.color.a = 1.0
+	await get_tree().create_timer(0.5).timeout 
+	create_tween().tween_property($Fade, "color:a", 0.0, 2.5)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

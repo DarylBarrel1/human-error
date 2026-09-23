@@ -10,3 +10,9 @@ script = ExtResource("1_jyhfs")
 [node name="Doors" parent="." unique_id=1469646759 instance=ExtResource("1_sugp2")]
 
 [node name="Monitor" parent="." unique_id=860135480 instance=ExtResource("2_jyhfs")]
+
+[node name="Fade" type="ColorRect" parent="." unique_id=1313626951]
+offset_right = 480.0
+offset_bottom = 270.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)

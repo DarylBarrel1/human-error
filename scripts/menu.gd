@@ -12,6 +12,8 @@ func _ready() -> void:
 
 
 func _on_start_pressed() -> void:
+	$Fade.color.a = 0.0
+	await create_tween().tween_property($Fade, "color:a", 1.0, 2.5).finished
 	get_tree().change_scene_to_file(GAME_SCENE)
 
 func _on_credits_pressed() -> void:
