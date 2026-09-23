@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://dr60oocpldru0"]
 
 [ext_resource type="Script" uid="uid://cyamrc0i1huqn" path="res://scripts/lose.gd" id="1_vjdtf"]
+[ext_resource type="FontFile" uid="uid://fd8b3mu3qflq" path="res://assets/fonts/PixelifySans-SemiBold.ttf" id="2_10rtl"]
+[ext_resource type="FontFile" uid="uid://d3jtcfuop2v6r" path="res://assets/fonts/PixelifySans-Regular.ttf" id="2_r6nsb"]
 
 [node name="Control" type="Control" unique_id=454005585]
 layout_mode = 3
@@ -13,21 +15,39 @@ script = ExtResource("1_vjdtf")
 
 [node name="Title" type="Label" parent="." unique_id=884877748]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
+offset_right = 480.0
+offset_bottom = 180.0
+theme_override_fonts/font = ExtResource("2_10rtl")
+theme_override_font_sizes/font_size = 24
+text = "Shift Terminated"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Subtitle" type="Label" parent="." unique_id=2020507979]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
+horizontal_alignment = 1
 
 [node name="Buttons" type="VBoxContainer" parent="." unique_id=104588022]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 480.0
+offset_bottom = 330.0
+theme_override_constants/separation = 12
+alignment = 1
 
 [node name="RetryButton" type="Button" parent="Buttons" unique_id=1198259438]
+custom_minimum_size = Vector2(200, 30)
 layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_r6nsb")
+theme_override_font_sizes/font_size = 17
+text = "Retry"
 
 [node name="QuitButton" type="Button" parent="Buttons" unique_id=1719813979]
+custom_minimum_size = Vector2(200, 30)
 layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_r6nsb")
+theme_override_font_sizes/font_size = 17
+text = "Return to Main Menu"

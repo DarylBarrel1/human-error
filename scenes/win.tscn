@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://rxdx7oray1c4"]
 
 [ext_resource type="Script" uid="uid://dw4q2vukd0yci" path="res://scripts/win.gd" id="1_r4oei"]
+[ext_resource type="FontFile" uid="uid://fd8b3mu3qflq" path="res://assets/fonts/PixelifySans-SemiBold.ttf" id="2_iiocm"]
+[ext_resource type="FontFile" uid="uid://d3jtcfuop2v6r" path="res://assets/fonts/PixelifySans-Regular.ttf" id="3_yxbqr"]
 
 [node name="Control" type="Control" unique_id=454005585]
 layout_mode = 3
@@ -11,20 +13,32 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_r4oei")
 
-[node name="Title" type="Label" parent="." unique_id=884877748]
+[node name="Title" type="Label" parent="." unique_id=763024227]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
+offset_right = 480.0
+offset_bottom = 220.0
+theme_override_fonts/font = ExtResource("2_iiocm")
+theme_override_font_sizes/font_size = 32
+text = "Still Human"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Subtitle" type="Label" parent="." unique_id=2020507979]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 
-[node name="Buttons" type="VBoxContainer" parent="." unique_id=104588022]
+[node name="Buttons" type="VBoxContainer" parent="." unique_id=815417982]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 480.0
+offset_bottom = 320.0
+theme_override_constants/separation = 12
+alignment = 1
 
-[node name="QuitButton" type="Button" parent="Buttons" unique_id=1719813979]
+[node name="QuitButton" type="Button" parent="Buttons" unique_id=1998742565]
+custom_minimum_size = Vector2(200, 30)
 layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("3_yxbqr")
+theme_override_font_sizes/font_size = 17
+text = "Return to Main Menu"
